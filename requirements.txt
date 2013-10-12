@@ -1,0 +1,26 @@
+Mako==0.7.0
+MarkupSafe==0.15
+PIL==1.1.7
+SOAPpy==0.12.0
+argparse==1.2.1
+chardet==2.0.1
+## FIXME: could not find svn URL in dependency_links for this package:
+distribute==0.6.24dev-r0
+dot2tex==2.8.7
+fpconst==0.7.2
+numpy==1.6.2
+pexpect==2.4
+psycopg2==2.4.5
+pyparsing==1.5.6
+python-apt==0.8.8.2
+python-debian==0.1.21
+python-debianbts==1.11
+pyxdg==0.19
+reportbug==6.4.4
+reportlab==2.5
+stevedore==0.12
+vboxapi==1.0
+virtualenv==1.10.1
+virtualenv-clone==0.2.4
+virtualenvwrapper==4.1.1
+wsgiref==0.1.2
