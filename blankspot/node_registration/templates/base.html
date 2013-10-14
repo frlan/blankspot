@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="style.css" />
+	<title>{% block title %}My amazing site{% endblock %}</title>
+	<meta name="generator" content="Geany 1.24" />
+</head>
+
+<body>
+	{% block sidebar %}
+	<div id="sidebar">
+		<ul></ul>
+	</div>
+	{% endblock %}
+	{% block content %}
+	<div id="content">
+	</div>
+	{% endblock %}
+</body>
+
+</html>
