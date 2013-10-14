@@ -4,6 +4,16 @@ blankspot
 A little tool to collect data of people wanting to contribute to a
 location based project like freifunk.
 
+Functions
+---------
+
+The software is intended to have this features -- not yet done :
+
+- offering a registration form where people can register with there
+  location
+- offering a list with geolocation of people registered
+- having a backend-interface allowing to get in contact with people
+
 Dependencies
 ------------
 
