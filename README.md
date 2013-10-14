@@ -8,8 +8,13 @@ Dependencies
 ------------
 
 Blankspot depends on:
+
 - Django and therefor Python
-- A database server supported by django (PostgreSQL recommended)
+- A database server supported by django (PostgreSQL recommended) and
+  its development libraries -- we have used PostgreSQL here
+
+For detailed list of python dependencies, have a look at
+requirements.txt next to this file.
 
 
 Creating databaseuser
