@@ -13,3 +13,6 @@ class Position(models.Model):
 
 	def __unicode__(self):
 		return (self.street)
+
+	def get_absolute_url(self):
+		return reverse('position-detail', kwargs={'pk': self.pk})
