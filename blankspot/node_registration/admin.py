@@ -1,4 +1,4 @@
 from django.contrib import admin
-from node_registration.models import position
+from node_registration.models import Position
 
-admin.site.register(position)
+admin.site.register(Position)
