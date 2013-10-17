@@ -1,6 +1,8 @@
 blankspot
 =========
 
+**Project not yet running. Keep also care .... learning project of author ;) **
+
 A little tool to collect data of people wanting to contribute to a
 location based project like freifunk.
 
