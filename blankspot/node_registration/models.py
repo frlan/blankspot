@@ -8,10 +8,12 @@ class Contact(models.Model):
 	
 	def __unicode__(self):
 		return (self.nick)
+
 	def get_absolute_url(self):
 		return reverse('contact-detail', kwargs={'pk': self.pk})
 
 class Position(models.Model):
+	contact = models.ForeignKey('Contact')
 	street = models.CharField(max_length=200, null=False, default="leer")
 	city = models.CharField(max_length=100, null=True, default="Jena")
 	address_description = models.TextField(null=True)
