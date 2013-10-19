@@ -7,7 +7,8 @@ from django.core.urlresolvers import reverse_lazy
 from django.views.generic.edit import FormView
 from node_registration.forms import ContactForm
 from node_registration.models import Position
-
+from django.shortcuts import render
+from django.views.generic.base import View
 
 
 class AboutView(TemplateView):
@@ -38,17 +39,10 @@ class PositionDelete(DeleteView):
 	model = Position
 	success_url = reverse_lazy('position-list')
 
-#def register(request):
-	#if 'q' in request.GET:
-		#message = 'You searched for: %r' % request.GET['q']
-	#else:
-		#message = 'You submitted an empty form.'
-	#return HttpResponse(message)
+class ListPosition(View):
+	model = Position
+	template_name = 'list.html'
+	
+	def get(self, request, *args, **kwargs):
+		return render(request, self.template_name, {'output': Position.objects.all()})
 
-#def index(request):
-	#node_list = position.objects.all()
-	#output = ', '.join([p.street for p in node_list])
-	#return HttpResponse(output)
-
-#def list_nodes(request):
-	#return render(request, 'list.html', {'output':Position.objects.all()})

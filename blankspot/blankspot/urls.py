@@ -2,7 +2,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.views.generic import TemplateView
 from node_registration import views
-from node_registration.views import PositionCreate, PositionDelete, PositionUpdate
+from node_registration.views import PositionCreate, PositionDelete, PositionUpdate, ListPosition
 
 
 
@@ -14,6 +14,7 @@ urlpatterns = patterns('',
     url(r'position/add/$', PositionCreate.as_view(), name='position_add'),
     url(r'position/(?P<pk>\d+)/$', PositionUpdate.as_view(), name='position_update'),
     url(r'position/(?P<pk>\d+)/delete/$', PositionDelete.as_view(), name='position_delete'),
+    url(r'position/list', views.ListPosition.as_view()),
     #url(r'^register/$', views.RegisterForm.as_view()),
     #url(r'^registering/$', views.Register.as_view()),
 )

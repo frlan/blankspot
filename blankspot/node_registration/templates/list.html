@@ -1,0 +1,9 @@
+{% if output %}
+    <ul>
+    {% for node in output %}
+        <li>{{ node.street }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No nodes registered at the moment.</p>
+{% endif %}
