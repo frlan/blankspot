@@ -6,6 +6,7 @@ from node_registration import views
 admin.autodiscover()
 
 urlpatterns = patterns('',
+	url(r'^$', TemplateView.as_view(template_name="index.html"), name='index'),
 	url(r'^about/', views.AboutView.as_view()),
 	url(r'^admin/', include(admin.site.urls)),
 	url(r'position', include('node_registration.urls')),

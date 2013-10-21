@@ -5,10 +5,14 @@ from django.views.generic import TemplateView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse_lazy
 from django.views.generic.edit import FormView
-from node_registration.forms import ContactForm
+from django.contrib.auth.decorators import login_required
+from django.core.exceptions import PermissionDenied
+from django.http import HttpResponseRedirect
+from node_registration.forms import ContactForm, PositionForm
 from node_registration.models import Position
 from django.shortcuts import render
 from django.views.generic.base import View
+
 
 
 class AboutView(TemplateView):
@@ -29,7 +33,6 @@ class ContactView(FormView):
 		return super(ContactView, self).form_valid(form)
 
 class PositionCreate(CreateView):
-	template_name = 'position_form.html'
 	model = Position
 
 class PositionUpdate(UpdateView):
