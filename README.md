@@ -39,3 +39,9 @@ logging in as superuser to database and than:
 	CREATE DATABSE blankspot;
 	CREATE ROLE blankspotuser WITH PASSWORD 'hahahfooo' LOGIN;
 	ALTER DATABASE blankspot OWNER TO blankspotuser;
+
+License
+-------
+
+The software is distributed under terms of AGPL. Please check LICENSE
+for details.
