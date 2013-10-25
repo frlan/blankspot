@@ -13,13 +13,8 @@ from node_registration.models import Position
 from django.shortcuts import render
 from django.views.generic.base import View
 
-
-
 class AboutView(TemplateView):
 	template_name = "about.html"
-
-class RegisterForm(TemplateView):
-	template_name = "register.html"
 
 class ContactView(FormView):
 	template_name = 'contact.html'
@@ -45,7 +40,7 @@ class PositionDelete(DeleteView):
 class ListPosition(View):
 	model = Position
 	template_name = 'list.html'
-	
+
 	def get(self, request, *args, **kwargs):
 		return render(request, self.template_name, {'output': Position.objects.all()})
 

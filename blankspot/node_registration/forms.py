@@ -12,5 +12,4 @@ class ContactForm(forms.Form):
 
 class PositionForm(ModelForm):
 	model = Position
-	exclude = ('Nick')
 		#exclude = ('slug', 'author', 'date_created', 'date_updated')
