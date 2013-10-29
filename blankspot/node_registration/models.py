@@ -12,7 +12,16 @@ class Position(models.Model):
 	latitude = models.FloatField(blank=True, null=True)
 
 	def __unicode__(self):
-		return (self.street)
+		knode = []
+		if self.city:
+			knode.append(self.city)
+		if self.street:
+			knode.append(self.street)
+		if self.latitude:
+			knode.append(str(self.latitude))
+		if self.longitude:
+			knode.append(str(self.longitude))
+		return u', '.join(knode)
 
 	def get_absolute_url(self):
 		return reverse('position-detail', kwargs={'pk': self.pk})
