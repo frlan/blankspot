@@ -8,17 +8,13 @@ from django.views.generic.edit import FormView
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import PermissionDenied
 from django.http import HttpResponseRedirect
-from node_registration.forms import ContactForm, PositionForm
+from node_registration.forms import PositionForm
 from node_registration.models import Position
 from django.shortcuts import render
 from django.views.generic.base import View
 
-class AboutView(TemplateView):
-	template_name = "about.html"
-
 class ContactView(FormView):
 	template_name = 'contact.html'
-	form_class = ContactForm
 	success_url = '/thanks/'
 
 	def form_valid(self, form):
