@@ -8,7 +8,7 @@ class Position(models.Model):
 	street = models.CharField(max_length=200, blank=True, null=True)
 	city = models.CharField(max_length=100, blank=True, null=True)
 	address_description = models.TextField(blank=True, null=True)
-	altitude = models.FloatField(blank=True, null=True)
+	longitude = models.FloatField(blank=True, null=True)
 	latitude = models.FloatField(blank=True, null=True)
 
 	def __unicode__(self):
