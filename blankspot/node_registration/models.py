@@ -1,3 +1,4 @@
+from django.core.urlresolvers import reverse
 from django.db import models
 
 class Position(models.Model):
@@ -24,4 +25,4 @@ class Position(models.Model):
 		return u', '.join(knode)
 
 	def get_absolute_url(self):
-		return reverse('position-detail', kwargs={'pk': self.pk})
+		return reverse('position-list')
