@@ -1,9 +1,13 @@
-{% if output %}
-    <ul>
-    {% for node in output %}
-        <li>{{ node }}</li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No nodes registered at the moment.</p>
-{% endif %}
+{% extends "base.html" %}
+
+{% block content %}
+	{% if output %}
+		<ul>
+		{% for node in output %}
+			<li>{{ node }}</li>{% endfor %}
+		</ul>
+	{% else %}
+		<p>No nodes registered at the moment.</p>
+	{% endif %}
+{% endblock content %}
+
