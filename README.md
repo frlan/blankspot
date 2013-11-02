@@ -34,7 +34,7 @@ Creating databaseuser
 
 Having default settings on settings.py you will need to run a postgres
 server on localhost. Needed user and database can be create e.g. with
-logging in as superuser to database and than:
+logging in as superuser to database and then:
 
 	CREATE DATABSE blankspot;
 	CREATE ROLE blankspotuser WITH PASSWORD 'hahahfooo' LOGIN;
