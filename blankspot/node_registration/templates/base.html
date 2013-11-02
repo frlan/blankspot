@@ -1,19 +1,35 @@
 {% load staticfiles %}
 <!DOCTYPE html>
+{% load bootstrap_toolkit %}
+{% load url from future %}
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" href="{% static "node_registration/style.css" %}" />
 	<title>{% block title %}My amazing site{% endblock %}</title>
 	<meta name="generator" content="Geany 1.24" />
+	{% bootstrap_stylesheet_tag %}
+    {% bootstrap_stylesheet_tag "responsive" %}
+    <style type="text/css">
+        body {
+            padding-top: 15px;
+        }
+    </style>
 </head>
 
 <body>
 	{% block navbar %}
-	<nav>
-		<ul>
-		</ul>
-	</nav>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="brand" href="/">Freifunk-Register</a>
+				<ul class="nav">
+					<li><a href="{% url 'position-list' %}">Knoten-Liste</a></li>
+					<li><a href="{% url 'position-add' %}">Neuer Knoten</a></li>
+					<li><a href="{% url 'todo' %}">ToDo</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
 	{% endblock navbar %}
 	{% block content %}
 	<div id="content">

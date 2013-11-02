@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block title%}Start{% endblock title %}
-{% block navbar %}
-<nav>
-	<ul>
-		<li><a href="{% url 'position-list' %}">Knoten-Liste</a></li>
-		<li><a href="{% url 'position-add' %}">Neuer Knoten</a></li>
-	</ul>
-</nav>
-{% endblock navbar %}
-{% block content %}
+{% load bootstrap_toolkit %}
 
+{% block content %}
+<div class="well">
+        <h1>Sag uns Bescheid!</h1>
+        <p>Du möchtest einen Knoten betreiben? Sag uns einfach Bescheid über das Registrierungsformular. </p>
+        <p>Wir melden uns bei Dir!</p>
+        <p><a class="btn btn-primary" href="{% url 'position-add' %}">Bescheid!</a></p>
+</div>
+ 
 {% endblock %}
