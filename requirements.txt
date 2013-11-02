@@ -2,6 +2,7 @@ Django==1.5.4
 Fabric==1.8.0
 South==0.8.2
 argparse==1.2.1
+django-bootstrap-toolkit==2.15.0
 docutils==0.11
 ecdsa==0.9
 paramiko==1.12.0
