@@ -1,16 +1,12 @@
-from django.http import HttpResponse
+#from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render
-from django.core.urlresolvers import reverse
+from django.core.urlresolvers import reverse, reverse_lazy
 from django.views.generic import TemplateView
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.core.urlresolvers import reverse_lazy
-from django.views.generic.edit import FormView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView, FormView
 from django.contrib.auth.decorators import login_required
-from django.core.exceptions import PermissionDenied
 from django.http import HttpResponseRedirect
 from node_registration.forms import PositionForm
 from node_registration.models import Position
-from django.shortcuts import render
 from django.views.generic.base import View
 
 class ContactView(FormView):
