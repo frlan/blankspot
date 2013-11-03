@@ -1,16 +1,21 @@
 {% extends "base.html" %}
+
 {% load bootstrap_toolkit %}
+
+{% block extra_head %}
+    {{ form.media }}
+{% endblock %}
 
 {% block content %}
 
-<b>Registerierung</b>
+<h1>Registerierung</h1>
 
-<form action="/position/add/" method="post">
+<form action="/position/add/" method="post" class="form-horizontal">
 {% csrf_token %}
-<table>
 {{ form|as_bootstrap }}
-</table>
-<input type="submit" value="Submit" />
+            <p class="form-actions">
+                <input type="submit" value="Submit" class="btn btn-primary">
+            </p>
 </form>
 
-{% endblock content %}
+{% endblock %}

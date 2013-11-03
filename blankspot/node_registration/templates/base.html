@@ -8,12 +8,18 @@
 	<title>{% block title %}My amazing site{% endblock %}</title>
 	<meta name="generator" content="Geany 1.24" />
 	{% bootstrap_stylesheet_tag %}
-    {% bootstrap_stylesheet_tag "responsive" %}
-    <style type="text/css">
-        body {
-            padding-top: 15px;
-        }
-    </style>
+        {% bootstrap_stylesheet_tag "responsive" %}
+        <style type="text/css">
+            body {
+                padding-top: 60px;
+            }
+        </style>
+        <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+       {% bootstrap_javascript_tag %}
+       {% block extra_head %}{% endblock %}
 </head>
 
 <body>
@@ -31,10 +37,9 @@
 		</div>
 	</div>
 	{% endblock navbar %}
-	{% block content %}
-	<div id="content">
+	<div class="container">
+    {% bootstrap_messages %}
+    {% block content %}Empty page{% endblock %}
 	</div>
-	{% endblock %}
-
 </body>
 </html>
