@@ -3,7 +3,7 @@
 {% load bootstrap_toolkit %}
 
 {% block extra_head %}
-    {{ form.media }}
+	{{ form.media }}
 {% endblock %}
 
 {% block content %}
@@ -13,9 +13,9 @@
 <form action="/position/add/" method="post" class="form-horizontal">
 {% csrf_token %}
 {{ form|as_bootstrap }}
-            <p class="form-actions">
-                <input type="submit" value="Submit" class="btn btn-primary">
-            </p>
+			<p class="form-actions">
+				<input type="submit" value="Submit" class="btn btn-primary">
+			</p>
 </form>
 
 {% endblock %}
