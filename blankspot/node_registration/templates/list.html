@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block title %}Liste der potentiellen Standorte{% endblock title %}
 {% block content %}
+<div class="container">
+        <div class="span4">
 	{% if output %}
 		<ul>
 		{% for node in output %}
@@ -9,5 +11,7 @@
 	{% else %}
 		<p>No nodes registered at the moment.</p>
 	{% endif %}
+        </div>
+</div>
 {% endblock content %}
 
