@@ -20,13 +20,14 @@ class ContactView(FormView):
 
 class PositionCreate(CreateView):
 	model = Position
+	success_url = reverse_lazy('thanks')
 
 class PositionUpdate(UpdateView):
 	model = Position
 
 class PositionDelete(DeleteView):
 	model = Position
-	success_url = reverse_lazy('position-list')
+	success_url = reverse_lazy('thanks')
 
 class ListPosition(View):
 	model = Position
