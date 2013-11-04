@@ -11,6 +11,7 @@ class Position(models.Model):
 	address_description = models.TextField("Genauere Beschreibung der Adresse. z.B. Dachwohnung mit Blick auf den Turm", blank=True, null=True)
 	longitude = models.FloatField(blank=True, null=True)
 	latitude = models.FloatField(blank=True, null=True)
+	timestamp = models.DateTimeField(auto_now_add=False, blank=True)
 
 	def __unicode__(self):
 		knode = []
