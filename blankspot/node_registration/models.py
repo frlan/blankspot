@@ -1,14 +1,15 @@
 from django.core.urlresolvers import reverse
 from django.db import models
+from django.utils.translation import ugettext as _
 
 class Position(models.Model):
-	first_name = models.CharField(verbose_name="Vorname", max_length=50, blank=True, null=True)
-	last_name = models.CharField(verbose_name="Nachname", max_length=50, blank=True, null=True)
-	nick = models.CharField(verbose_name="Spitzname*", max_length=128)
-	email = models.EmailField(verbose_name="Email*", max_length=254)
-	street = models.CharField(verbose_name="Strasse", max_length=200, blank=True, null=True)
-	city = models.CharField(verbose_name="Stadt", max_length=100, blank=True, null=True)
-	address_description = models.TextField("Genauere Beschreibung der Adresse. z.B. Dachwohnung mit Blick auf den Turm", blank=True, null=True)
+	first_name = models.CharField(verbose_name=_("First Name"), max_length=50, blank=True, null=True)
+	last_name = models.CharField(verbose_name=_("Family Name"), max_length=50, blank=True, null=True)
+	nick = models.CharField(verbose_name=_("Nick*"), max_length=128)
+	email = models.EmailField(verbose_name=_("E-mail*"), max_length=254)
+	street = models.CharField(verbose_name=_("Street"), max_length=200, blank=True, null=True)
+	city = models.CharField(verbose_name=_("City"), max_length=100, blank=True, null=True)
+	address_description = models.TextField(verbose_name=_("Adressdescription"), help_text=_("Genauere Beschreibung der Adresse. z.B. Dachwohnung mit Blick auf den Turm"), blank=True, null=True)
 	longitude = models.FloatField(blank=True, null=True)
 	latitude = models.FloatField(blank=True, null=True)
 	timestamp = models.DateTimeField(auto_now_add=True, blank=True)
@@ -29,5 +30,5 @@ class Position(models.Model):
 		return reverse('position-list')
 
 	class Meta:
-		verbose_name = (u'Position')
-		verbose_name_plural = (u'Positions')
+		verbose_name = _(u'Position')
+		verbose_name_plural = _(u'Positions')
