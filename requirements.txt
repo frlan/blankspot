@@ -1,6 +1,5 @@
-Django==1.5.5
-South==0.8.2
-argparse==1.2.1
-django-bootstrap-toolkit==2.15.0
-psycopg2==2.5.1
-wsgiref==0.1.2
+South
+django-bootstrap-toolkit
+Django
+psycopg2
+gunicorn
