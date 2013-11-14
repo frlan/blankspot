@@ -124,7 +124,8 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'south',
     'node_registration',
-    'bootstrap_toolkit'
+    'bootstrap_toolkit',
+    'gunicorn'
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
