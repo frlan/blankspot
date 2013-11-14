@@ -79,5 +79,5 @@ This can be done by:
 License
 -------
 
-The software is distributed under terms of AGPL. Please check LICENSE
+The software is distributed under terms of AGPLv3+. Please check COPYING
 for details.
