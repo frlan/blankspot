@@ -6,8 +6,9 @@ from django.core.mail import EmailMessage
 
 class ContactForm(forms.Form):
     subject = forms.CharField(max_length=100)
-    message = forms.CharField()
     sender = forms.EmailField()
+    message = forms.CharField(widget=forms.Textarea)
+
 
     def send_email(self):
         print settings.ROOT_URLCONF
@@ -22,3 +23,4 @@ class ContactForm(forms.Form):
             values.append("%s: \t%s" % (self[i[0]].label, str(self.cleaned_data[i[0]]) ) )
 
         email.send()
+
