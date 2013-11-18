@@ -15,8 +15,8 @@ class ContactForm(forms.Form):
         email = EmailMessage(
                     subject="foo",
                     #body='Here is the message.',
-                    from_email='flanitz@bgc-jena.mpg.de',
-                    to=['frank.lanitz@bgc-jena.mpg.de'])
+                    from_email='foo@example.com',
+                    to=['foo@example.com'])
 
         values = []
         for i in self.fields.iteritems():
