@@ -15,4 +15,3 @@ urlpatterns = patterns('',
 	url(r'^position/', include('node_registration.urls')),
 	url(r'^thanks$', TemplateView.as_view(template_name="thanks.html"), name='thanks')
 )
-

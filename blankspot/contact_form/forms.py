@@ -1,15 +1,18 @@
 from django import forms
+from django.conf import settings
+from django.core.mail import send_mail
+from django.core.mail import EmailMessage
+
 
 class ContactForm(forms.Form):
     subject = forms.CharField(max_length=100)
     message = forms.CharField()
     sender = forms.EmailField()
 
-
     def send_email(self):
-
+        print settings.ROOT_URLCONF
         email = EmailMessage(
-                    subject=self.cleaned_data[subject],
+                    subject="foo",
                     #body='Here is the message.',
                     from_email='flanitz@bgc-jena.mpg.de',
                     to=['frank.lanitz@bgc-jena.mpg.de'])
