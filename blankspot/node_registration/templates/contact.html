@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% load bootstrap_toolkit %}
+
+{% block extra_head %}
+        {{ form.media }}
+{% endblock %}
+
+{% block title %}Registering a gascylinder{% endblock title %}
+
+{% block content %}
+
+<h1>Contact</h1>
+
+
+<form action="/contact/" method="post" class="form-horizontal">
+{% csrf_token %}
+{{ form|as_bootstrap }}
+                        <p class="form-actions">
+                                <input type="submit" value="Submit" class="btn btn-primary">
+                        </p>
+</form>
+
+{% endblock %}
