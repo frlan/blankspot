@@ -5,9 +5,9 @@ from django.core.mail import EmailMessage
 
 
 class ContactForm(forms.Form):
-    subject = forms.CharField(max_length=100)
-    sender = forms.EmailField()
-    message = forms.CharField(widget=forms.Textarea)
+    subject = forms.CharField(label="Betreff", max_length=100)
+    sender = forms.EmailField(label="Emailadresse")
+    message = forms.CharField(label="Botschaft", widget=forms.Textarea)
 
 
     def send_email(self):
