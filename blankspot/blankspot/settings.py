@@ -125,7 +125,8 @@ INSTALLED_APPS = (
     'south',
     'node_registration',
     'bootstrap_toolkit',
-    'gunicorn'
+    'gunicorn',
+    'contact_form'
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
