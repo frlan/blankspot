@@ -5,10 +5,24 @@ from django.views.generic.base import View
 from django.http import HttpResponseRedirect
 from node_registration.forms import PositionForm
 from node_registration.models import Position
+from django.core.mail import send_mail
+from django.core.mail import EmailMessage
+
 
 class PositionCreate(CreateView):
     model = Position
     success_url = reverse_lazy('thanks')
+
+    def form_valid(self, form):
+        email = EmailMessage(
+                    subject="Blankspot: A new position has been added",
+                    from_email='foo@example.com',
+                    to=['foo@example.com'])
+
+        email.send()
+
+        return super(PositionCreate, self).form_valid(form)
+
 
 class ListPosition(View):
     model = Position

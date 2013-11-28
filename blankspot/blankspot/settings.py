@@ -159,4 +159,9 @@ LOGGING = {
         },
     }
 }
+
+# TODO
+# Ensuring mail is only printed to stdout for debugging resons. Needs
+# to be removed when going live.
+
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
