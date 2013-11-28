@@ -2,13 +2,12 @@ from django import forms
 from django.conf import settings
 from django.core.mail import send_mail
 from django.core.mail import EmailMessage
-
+from django.utils.translation import ugettext as _
 
 class ContactForm(forms.Form):
-    subject = forms.CharField(label="Betreff", max_length=100)
-    sender = forms.EmailField(label="Emailadresse")
-    message = forms.CharField(label="Botschaft", widget=forms.Textarea)
-
+    subject = forms.CharField(label=_("Subject"), max_length=100)
+    sender = forms.EmailField(label=_("Email"))
+    message = forms.CharField(label=_("Message"), widget=forms.Textarea)
 
     def send_email(self):
 
