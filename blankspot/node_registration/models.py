@@ -9,7 +9,10 @@ class Position(models.Model):
 	email = models.EmailField(verbose_name=_("E-mail*"), max_length=254)
 	street = models.CharField(verbose_name=_("Street"), max_length=200, blank=True, null=True)
 	city = models.CharField(verbose_name=_("City"), max_length=100, blank=True, null=True)
-	address_description = models.TextField(verbose_name=_("Adressdescription"), help_text=_("Genauere Beschreibung der Adresse. z.B. Dachwohnung mit Blick auf den Turm"), blank=True, null=True)
+	address_description = models.TextField(verbose_name=_("Adressdescription"),
+		help_text=_("A more detailed description of a possible  position. E.g. roof top with view over city to the south"),
+		blank=True,
+		null=True)
 	longitude = models.FloatField(blank=True, null=True)
 	latitude = models.FloatField(blank=True, null=True)
 	timestamp = models.DateTimeField(auto_now_add=True, blank=True)

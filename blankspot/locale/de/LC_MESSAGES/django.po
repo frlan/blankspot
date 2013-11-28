@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-28 18:19+0100\n"
+"POT-Creation-Date: 2013-11-28 18:24+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,15 +58,16 @@ msgstr ""
 msgid "Adressdescription"
 msgstr ""
 
-#: node_registration/models.py:12
+#: node_registration/models.py:13
 msgid ""
-"Genauere Beschreibung der Adresse. z.B. Dachwohnung mit Blick auf den Turm"
+"A more detailed description of a possible  position. E.g. roof top with view "
+"over city to the south"
 msgstr ""
 
-#: node_registration/models.py:33
+#: node_registration/models.py:36
 msgid "Position"
 msgstr ""
 
-#: node_registration/models.py:34
+#: node_registration/models.py:37
 msgid "Positions"
 msgstr ""
