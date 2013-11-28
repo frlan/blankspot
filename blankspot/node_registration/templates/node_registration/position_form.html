@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load i18n %}
 {% load bootstrap_toolkit %}
 
 {% block extra_head %}
@@ -8,15 +8,15 @@
 
 {% block content %}
 
-<h1>Registrierung</h1>
+<h1>{% trans "Registering" %}</h1>
 
-<p>Felder mit * notwendig, um Dich später zu erreichen. Sie werden nicht veröffentlicht.</p>
+<p>{% trans "Field with * are required -- Personal data will not be published" %}</p>
 
 <form action="/position/add/" method="post" class="form-horizontal">
 {% csrf_token %}
 {{ form|as_bootstrap }}
 			<p class="form-actions">
-				<input type="submit" value="Submit" class="btn btn-primary">
+				<input type="submit" value="{% trans "Submit" %}" class="btn btn-primary">
 			</p>
 </form>
 

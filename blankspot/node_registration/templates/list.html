@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
-{% block title %}Liste der potentiellen Standorte{% endblock title %}
+{% block title %}{% trans "List of potential positions" %}{% endblock title %}
 {% block content %}
 <div class="container">
 		<div class="span4">
@@ -10,7 +10,7 @@
 			<li>{{ node }}</li>{% endfor %}
 		</ul>
 	{% else %}
-		<p>No nodes registered at the moment.</p>
+		<p>{% trans "No nodes registered at the moment." %}</p>
 	{% endif %}
 		</div>
 </div>
