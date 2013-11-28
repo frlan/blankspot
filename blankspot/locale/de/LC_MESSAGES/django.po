@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-28 18:24+0100\n"
+"POT-Creation-Date: 2013-11-28 18:35+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -70,4 +70,20 @@ msgstr ""
 
 #: node_registration/models.py:37
 msgid "Positions"
+msgstr ""
+
+#: node_registration/templates/base.html:6
+msgid "en"
+msgstr ""
+
+#: node_registration/templates/base.html:9
+msgid "My amazing site"
+msgstr ""
+
+#: node_registration/templates/base.html:33
+msgid "Node list"
+msgstr ""
+
+#: node_registration/templates/base.html:35
+msgid "ToDo"
 msgstr ""
