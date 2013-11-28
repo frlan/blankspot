@@ -19,7 +19,7 @@ class ContactForm(forms.Form):
         email = EmailMessage(
                     subject="foo",
                     body="\n".join(values),
-                    from_email='foo@example.com',
+                    from_email=self.cleaned_data['sender'],
                     to=['foo@example.com'])
 
         email.send()
