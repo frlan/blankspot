@@ -11,16 +11,16 @@ class ContactForm(forms.Form):
 
 
     def send_email(self):
-        print settings.ROOT_URLCONF
-        email = EmailMessage(
-                    subject="foo",
-                    #body='Here is the message.',
-                    from_email='foo@example.com',
-                    to=['foo@example.com'])
 
         values = []
         for i in self.fields.iteritems():
             values.append("%s: \t%s" % (self[i[0]].label, str(self.cleaned_data[i[0]]) ) )
+
+        email = EmailMessage(
+                    subject="foo",
+                    body="\n".join(values),
+                    from_email='foo@example.com',
+                    to=['foo@example.com'])
 
         email.send()
 
