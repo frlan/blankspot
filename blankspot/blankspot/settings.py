@@ -7,6 +7,8 @@ ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
 
+
+
 MANAGERS = ADMINS
 
 DATABASES = {
@@ -165,3 +167,13 @@ LOGGING = {
 # to be removed when going live.
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Allow any settings to be defined in local_settings.py which should be
+# ignored in your version control system allowing for settings to be
+# defined per machine.
+try:
+    from local_settings import *
+except ImportError:
+    pass
+
+
