@@ -14,11 +14,22 @@ class PositionCreate(CreateView):
     success_url = reverse_lazy('thanks')
 
     def form_valid(self, form):
+        # TODO:
+        # Maybe moving the email stuff into a seperate function.
+
+        # Creating the body of the message
+        values = []
+
+        for i in form.fields.iteritems():
+                values.append("%s: \t%s" % (i[0],form.data[i[0]]))
+
+        # Building up email object with actual content.
         email = EmailMessage(
                     subject="Blankspot: A new position has been added",
                     from_email='foo@example.com',
+                    body="\n".join(values),
                     to=['foo@example.com'])
-
+        # Sending out email.
         email.send()
 
         return super(PositionCreate, self).form_valid(form)
