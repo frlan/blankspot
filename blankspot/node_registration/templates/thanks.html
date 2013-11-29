@@ -1,9 +1,10 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block title%}Danke{% endblock title %}
 {% load bootstrap_toolkit %}
 
 {% block content %}
 <div class="hero-unit">
-	<p>Vielen Dank!</p>
+	<p>{% trans "Thank you" %}</p>
 </div>
 {% endblock %}

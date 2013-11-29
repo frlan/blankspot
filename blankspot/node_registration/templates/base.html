@@ -2,10 +2,11 @@
 {% load staticfiles %}
 {% load bootstrap_toolkit %}
 {% load url from future %}
-<html lang="en">
+{% load i18n %}
+<html lang={% trans "en" %}>
 <head>
 	<meta charset="utf-8" />
-	<title>{% block title %}My amazing site{% endblock %}</title>
+	<title>{% block title %} {% trans "My amazing site" %} {% endblock %}</title>
 	<meta name="generator" content="Geany 1.24" />
 	{% bootstrap_stylesheet_tag %}
 		{% bootstrap_stylesheet_tag "responsive" %}
@@ -27,12 +28,12 @@
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a class="brand" href="/">Freifunk-Register</a>
+				<a class="brand" href="/">{% trans "Register a Freifunk node" %}</a>
 				<ul class="nav">
-					<li><a href="{% url 'position-list' %}">Knoten-Liste</a></li>
-					<li><a href="{% url 'position-add' %}">Neuer Knoten</a></li>
-					<li><a href="{% url 'todo' %}">ToDo</a></li>
-					<li><a href="{% url 'contact' %}">Contact</a></li>
+					<li><a href="{% url 'position-list' %}">{% trans "Node list" %}</a></li>
+					<li><a href="{% url 'position-add' %}">{% trans "New node" %}</a></li>
+					<li><a href="{% url 'todo' %}">{% trans "ToDo" %}</a></li>
+					<li><a href="{% url 'contact' %}">{% trans "Contact" %}</a></li>
 				</ul>
 			</div>
 		</div>

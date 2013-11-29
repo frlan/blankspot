@@ -1,12 +1,20 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block title%}Start{% endblock title %}
 {% load bootstrap_toolkit %}
 
 {% block content %}
 <div class="hero-unit">
-		<h1>Sag uns Bescheid!</h1>
-		<p>Du möchtest einen Knoten betreiben? Sag uns einfach Bescheid über das Registrierungsformular. </p>
-		<p>Wir melden uns bei Dir!</p>
-		<p><a class="btn btn-large btn-primary" href="{% url 'position-add' %}">Bescheid!</a></p>
+{% blocktrans %}
+		<h1>Let us know</h1> 
+		
+		<p>You like to have your own Freifunk node, but you are not 
+		sure about? Maybe like to start with some of your neighbors? No 
+		problem! The aim of this page is to check where people like to 
+		join the Freifunk and get them together. Just register.</p> 
+	
+		<p>We will get in touch with you!</p>
+{% endblocktrans %}
+        <p><a class="btn btn-large btn-primary" href="{% url 'position-add' %}">{% trans "Register" %}</a></p>
 </div>
 {% endblock %}

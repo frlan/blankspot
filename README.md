@@ -76,6 +76,19 @@ This can be done by:
 	$ pip install -r requirements.txt
 
 
+i18n/l10n
+---------
+
+You will find the tranlstions files inside
+locales/<lang>/LC_MESSAGES/django.po encoded with gettext's po file
+format. To update translation file you can run
+
+	$ django-admin.py makemessages --all
+
+For translation the files you can use for example poedit or just any
+text editor -- like Geany which is also having some translations
+plugin.
+
 License
 -------
 
