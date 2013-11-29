@@ -10,13 +10,13 @@
 
 {% block content %}
 
-<h1>Kontakt</h1>
+<h1>{% trans "Contact us" %}</h1>
 
 <form action="/contact/" method="post" class="form-horizontal">
 {% csrf_token %}
 {{ form|as_bootstrap }}
                         <p class="form-actions">
-                                <input type="submit" value="Submit" class="btn btn-primary">
+                                <input type="submit" value="{% trans "Submit" %}" class="btn btn-primary">
                         </p>
 </form>
 
