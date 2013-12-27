@@ -5,43 +5,43 @@
 {% load i18n %}
 <html lang={% trans "en" %}>
 <head>
-	<meta charset="utf-8" />
-	<title>{% block title %} {% trans "My amazing site" %} {% endblock %}</title>
-	<meta name="generator" content="Geany 1.24" />
-	{% bootstrap_stylesheet_tag %}
-		{% bootstrap_stylesheet_tag "responsive" %}
-		<style type="text/css">
-			body {
-				padding-top: 60px;
-			}
-		</style>
-		<!--[if lt IE 9]>
-		  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-	   {% bootstrap_javascript_tag %}
-	   {% block extra_head %}{% endblock %}
+    <meta charset="utf-8" />
+    <title>{% block title %} {% trans "My amazing site" %} {% endblock %}</title>
+    <meta name="generator" content="Geany 1.24" />
+    {% bootstrap_stylesheet_tag %}
+        {% bootstrap_stylesheet_tag "responsive" %}
+        <style type="text/css">
+            body {
+                padding-top: 60px;
+            }
+        </style>
+        <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+       {% bootstrap_javascript_tag %}
+       {% block extra_head %}{% endblock %}
 </head>
 
 <body>
-	{% block navbar %}
-	<div class="navbar navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<a class="brand" href="/">{% trans "Register a Freifunk node" %}</a>
-				<ul class="nav">
-					<li><a href="{% url 'position-list' %}">Knoten-Liste</a></li>
-					<li><a href="{% url 'position-add' %}">Neuer Knoten</a></li>
-					<li><a href="{% url 'contact' %}">Contact</a></li>
-					<li><a href="{% url 'about' %}">{% trans "About" %}</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	{% endblock navbar %}
-	<div class="container">
-	{% bootstrap_messages %}
-	{% block content %}Empty page{% endblock %}
-	</div>
+    {% block navbar %}
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="/">{% trans "Register a Freifunk node" %}</a>
+                <ul class="nav">
+                    <li><a href="{% url 'position-list' %}">Knoten-Liste</a></li>
+                    <li><a href="{% url 'position-add' %}">Neuer Knoten</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'about' %}">{% trans "About" %}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% endblock navbar %}
+    <div class="container">
+    {% bootstrap_messages %}
+    {% block content %}Empty page{% endblock %}
+    </div>
 </body>
 </html>
