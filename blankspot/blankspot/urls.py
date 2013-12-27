@@ -7,10 +7,10 @@ from contact_form.views import ContactView
 admin.autodiscover()
 
 urlpatterns = patterns('',
-	url(r'^$', TemplateView.as_view(template_name="index.html"), name='index'),
-	url(r'^contact/$', ContactView.as_view(), name='contact'),
-	url(r'^about/', TemplateView.as_view(template_name="about.html"), name='about'),
-	url(r'^admin/', include(admin.site.urls)),
-	url(r'^position/', include('node_registration.urls')),
-	url(r'^thanks$', TemplateView.as_view(template_name="thanks.html"), name='thanks')
+    url(r'^$', TemplateView.as_view(template_name="index.html"), name='index'),
+    url(r'^contact/$', ContactView.as_view(), name='contact'),
+    url(r'^about/', TemplateView.as_view(template_name="about.html"), name='about'),
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^position/', include('node_registration.urls')),
+    url(r'^thanks$', TemplateView.as_view(template_name="thanks.html"), name='thanks')
 )
