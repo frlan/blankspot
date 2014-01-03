@@ -85,6 +85,10 @@ format. To update translation file you can run
 
 	$ django-admin.py makemessages --all
 
+After this has been done, translations needs to be recompiled with
+
+	$ python manage.py compilemessages
+
 For translation the files you can use for example poedit or just any
 text editor -- like Geany which is also having some translations
 plugin.
