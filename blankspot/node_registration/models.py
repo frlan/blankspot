@@ -1,6 +1,6 @@
 from django.core.urlresolvers import reverse
 from django.db import models
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 
 class Position(models.Model):
 	first_name = models.CharField(verbose_name=_("First Name"), max_length=50, blank=True, null=True)
