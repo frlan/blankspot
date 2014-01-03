@@ -2,7 +2,7 @@ from django import forms
 from django.conf import settings
 from django.core.mail import send_mail
 from django.core.mail import EmailMessage
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 
 class ContactForm(forms.Form):
     subject = forms.CharField(label=_("Subject"), max_length=100)

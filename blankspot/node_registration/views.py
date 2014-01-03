@@ -8,7 +8,7 @@ from node_registration.models import Position
 from django.core.mail import send_mail
 from django.core.mail import EmailMessage
 from django.views.generic.base import View
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 
 
 class PositionCreate(CreateView):

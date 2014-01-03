@@ -1,4 +1,5 @@
 # Django settings for blankspot project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -38,6 +39,12 @@ TIME_ZONE = 'America/Chicago'
 LANGUAGE_CODE = 'en-us'
 
 SITE_ID = 1
+
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
