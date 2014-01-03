@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-03 17:36+0100\n"
+"POT-Creation-Date: 2014-01-03 17:42+0100\n"
 "PO-Revision-Date: 2014-01-03 17:36+0100\n"
 "Last-Translator: Frank Lanitz <frank@frank.uvena.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -118,6 +118,19 @@ msgstr "Meine coole Seite"
 #: node_registration/templates/base.html:31
 msgid "Register a Freifunk node"
 msgstr "Einen Freifunk-Knoten melden"
+
+#: node_registration/templates/base.html:33
+msgid "Node list"
+msgstr ""
+
+#: node_registration/templates/base.html:34
+msgid "New node"
+msgstr ""
+
+#: node_registration/templates/base.html:35
+#, fuzzy
+msgid "Contact"
+msgstr "Kontaktiere uns"
 
 #: node_registration/templates/index.html:8
 msgid ""
